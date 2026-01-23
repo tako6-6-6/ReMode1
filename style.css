@@ -1385,3 +1385,171 @@ button:hover {
 #burgerbar {
     display: none !important;
 }
+
+/* ffffffff */
+/* Filter and Favorites Container */
+.filter-favorites-container {
+    background-color: rgba(237, 191, 219, 0.5);
+    padding: 20px 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-bottom: 3px solid rgba(128, 49, 119, 0.3);
+}
+
+.filter-controls {
+    display: flex;
+   flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: rgba(128, 49, 119, 1);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    margin-left: 0px;
+    width: 200px;
+}
+
+.filter-btn:hover {
+    background-color: rgba(94, 43, 148, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn svg {
+    stroke: white;
+}
+
+#favorites-btn.active {
+    background-color: rgba(205, 31, 141, 1);
+}
+
+.filter-select {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid rgba(128, 49, 119, 1);
+    background-color: white;
+    color: rgba(128, 49, 119, 1);
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-select:hover {
+    background-color: rgba(237, 191, 219, 0.5);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: rgba(94, 43, 148, 1);
+}
+
+/* Card Image Container for Heart Icon */
+.card-image-container {
+    position: relative;
+    width: 100%;
+}
+
+.favorite-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-heart:hover {
+    transform: scale(1.1);
+    background-color: white;
+}
+
+.favorite-heart svg {
+    stroke: rgba(128, 49, 119, 1);
+    fill: none;
+    transition: all 0.3s ease;
+}
+
+.favorite-heart.active svg {
+    fill: rgba(205, 31, 141, 1);
+    stroke: rgba(205, 31, 141, 1);
+}
+
+.favorite-heart.active {
+    background-color: rgba(253, 239, 239, 1);
+}
+
+/* Card visibility for filtering */
+.card.hidden {
+    display: none !important;
+}
+
+/* Empty state message */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: "Playfair Display", serif;
+    color: rgba(128, 49, 119, 1);
+    font-size: 24px;
+}
+
+.empty-state.hidden {
+    display: none;
+}
+
+/* Favorites count badge */
+#favorites-count {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+
+
+
+.carousel.grid-mode {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: flex-start;
+    overflow: visible;
+    /* This line stops the movement */
+    animation: none !important; 
+}
+
+.carousel.grid-mode .group {
+    display: contents; 
+    animation: none !important;
+    transform: none !important;
+}
+
+.card.hidden {
+    display: none !important;
+}

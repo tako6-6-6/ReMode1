@@ -33,6 +33,37 @@
         </div>
       </div>
     </header>
+    <!-- Filter and Favorites Section -->
+<div class="filter-favorites-container">
+    <button id="favorites-btn" class="filter-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        Favorites (<span id="favorites-count">0</span>)
+    </button>
+    
+    <div class="filter-controls">
+        <select id="category-filter" class="filter-select">
+            <option value="all">All Categories</option>
+            <option value="dress">Dress</option>
+            <option value="skirt">Skirt</option>
+            <option value="top">Top</option>
+            <option value="bag">Bag</option>
+            <option value="hoodie">Hoodie</option>
+            <option value="jeans">Jeans</option>
+            <option value="shoes">Shoes</option>
+        </select>
+        
+        <select id="price-filter" class="filter-select">
+            <option value="all">All Prices</option>
+            <option value="0-20">$0 - $20</option>
+            <option value="20-50">$20 - $50</option>
+            <option value="50+">$50+</option>
+        </select>
+        
+        <button id="reset-filters" class="filter-btn">Reset Filters</button>
+    </div>
+</div>
     <section class="triala1">
          <div class="trade">
            <a href="#" style="font-size: 36px;">For sale</a>
@@ -40,79 +71,131 @@
          </div>
          <div class="carousel">
             <div class="group">
-                <div class="card">
-                       <img src="./photoes/Rectangle 57.png" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Sarah Jojnson </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span> </p>
+                <div class="card" data-category="bag" data-price="78">
+                     <div class="card-image-container">
+                            <img src="./photoes/Rectangle 57.png" alt="">
+                            <button class="favorite-heart" data-item-id="bag-01">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Sarah Johnson</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                   <img src="./photoes/black dress.jpg" alt="">
-                   <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Emily Davis </p>
-                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">9$</span> </p>
+                 <div class="card" data-category="dress" data-price="30">
+                     <div class="card-image-container">
+                            <img src="./photoes/black dress.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="dress-01">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">nia Johnson</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                   <img src="./photoes/Plaid Y2K Mini Skirt _ Mabel Love Co.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Laura Martinez </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
+                 <div class="card" data-category="top" data-price="36">
+                     <div class="card-image-container">
+                            <img src="./photoes/top.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="top-01">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Sophia Smith</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                  <img src="./photoes/top.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Sophia Robinson </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
+                 <div class="card" data-category="top" data-price="45">
+                     <div class="card-image-container">
+                            <img src="./photoes/SOLD _ terjual _ habis comment 'restock' if u….jpg" alt="">
+                            <button class="favorite-heart" data-item-id="top-02">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Laura Martinez</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                  <img src="./photoes/SOLD _ terjual _ habis comment 'restock' if u….jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Laura Martinez </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
-                </div>
-                <div class="card">
-                  <img src="./photoes/Marvel Boys Red Short Sleeve Spider-man T-shirt Spider Man Tee Shirt Medium.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Ana janelidze </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
-                </div>
+                 <div class="card" data-category="top" data-price="65">
+                     <div class="card-image-container">
+                            <img src="./photoes/Marvel Boys Red Short Sleeve Spider-man T-shirt Spider Man Tee Shirt Medium.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="top-03">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Ana Janelidze</p>
+                      <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
+                     </div>
             </div>
             <div class="group">
-                <div class="card">
-                       <img src="./photoes/Rectangle 57.png" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Sarah Jojnson </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span> </p>
+                <div class="card" data-category="bag" data-price="78">
+                     <div class="card-image-container">
+                            <img src="./photoes/bag5.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="bag-09">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Sarah Johnson</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                   <img src="./photoes/black dress.jpg" alt="">
-                   <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Emily Davis </p>
-                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">9$</span> </p>
+                 <div class="card" data-category="dress" data-price="30">
+                     <div class="card-image-container">
+                            <img src="./photoes/skirt4.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="dress-09">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">nia Johnson</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                   <img src="./photoes/Plaid Y2K Mini Skirt _ Mabel Love Co.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Laura Martinez </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
+                 <div class="card" data-category="top" data-price="36">
+                     <div class="card-image-container">
+                            <img src="./photoes/top8.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="top-08">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Sophia Smith</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                  <img src="./photoes/top.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Sophia Robinson </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
+                 <div class="card" data-category="top" data-price="45">
+                     <div class="card-image-container">
+                            <img src="./photoes/top1.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="top-07">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Laura Martinez</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                  <img src="./photoes/SOLD _ terjual _ habis comment 'restock' if u….jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Laura Martinez </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
-                </div>
-                <div class="card">
-                  <img src="./photoes/Marvel Boys Red Short Sleeve Spider-man T-shirt Spider Man Tee Shirt Medium.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Ana janelidze </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
+                 <div class="card" data-category="shoes" data-price="65">
+                     <div class="card-image-container">
+                            <img src="./photoes/shoes.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="shoes-03">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Ana Janelidze</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
             </div>
          </div>
-          </div>
+          
     </section>
            <div style="background-color:rgba(237, 191, 219, 1) ; width: 100%;height:5px ;">
 
@@ -124,77 +207,130 @@
         
           <div class="carousel">
             <div class="group">
-                <div class="card">
-                       <img src="./photoes/bag.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Sarah Jojnson </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span> </p>
+                <div class="card" data-category="bag" data-price="44">
+                     <div class="card-image-container">
+                           <img src="./photoes/bag.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="bag-02">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Sarah Johnson</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                   <img src="./photoes/Gothic Y2K Oversized Streetwear Hoodie.jpg" alt="">
-                   <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Emily Davis </p>
-                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">9$</span> </p>
+                 <div class="card" data-category="hoodie" data-price="77">
+                     <div class="card-image-container">
+                             <img src="./photoes/Gothic Y2K Oversized Streetwear Hoodie.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="hoodie-01">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">nia Johnson</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                   <img src="./photoes/pink dress.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Laura Martinez </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
+                 <div class="card" data-category="dress" data-price="47">
+                     <div class="card-image-container">
+                             <img src="./photoes/pink dress.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="dress-02">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Sophia Smith</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                  <img src="./photoes/Punk-Stil Vintage bestickte Skinny Jeans mit tiefer Taille und Schlag für Frauen.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Sophia Robinson </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
+                 <div class="card" data-category="jeans" data-price="45">
+                     <div class="card-image-container">
+                            <img src="./photoes/Punk-Stil Vintage bestickte Skinny Jeans mit tiefer Taille und Schlag für Frauen.jpg" alt="">
+
+                            <button class="favorite-heart" data-item-id="jeans-01">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Laura Martinez</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                  <img src="./photoes/Aelfric Eden Men's Vintage Oversized Star Graphic Print Hoodie Streetwear Zip-Up Hoodies Sweatshirt Casual Hooded.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Laura Martinez </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
-                </div>
-                <div class="card">
-                  <img src="./photoes/Vans.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Ana janelidze </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
+                 <div class="card" data-category="hoodie" data-price="65">
+                     <div class="card-image-container">
+                           <img src="./photoes/Aelfric Eden Men's Vintage Oversized Star Graphic Print Hoodie Streetwear Zip-Up Hoodies Sweatshirt Casual Hooded.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="hoodie-02">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Tako turmanidze</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
             </div>
             <div class="group">
-                <div class="card">
-                       <img src="./photoes/bag.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Sarah Jojnson </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span> </p>
+                <div class="card" data-category="shoes" data-price="78">
+                     <div class="card-image-container">
+                            <img src="./photoes/shoes2.jpg" alt="bag-02">
+                            <button class="favorite-heart" data-item-id="shoes-02">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Sarah Johnson</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                   <img src="./photoes/Gothic Y2K Oversized Streetwear Hoodie.jpg" alt="">
-                   <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Emily Davis </p>
-                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">9$</span> </p>
+                 <div class="card" data-category="dress" data-price="30">
+                     <div class="card-image-container">
+                            <img src="./photoes/skirt3.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="dress-02">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">nia Johnson</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                   <img src="./photoes/pink dress.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Laura Martinez </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
+                 <div class="card" data-category="skirt" data-price="36">
+                     <div class="card-image-container">
+                            <img src="./photoes/skirt2.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="skirt-07">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Sophia Smith</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                  <img src="./photoes/Punk-Stil Vintage bestickte Skinny Jeans mit tiefer Taille und Schlag für Frauen.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Sophia Robinson </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
+                 <div class="card" data-category="skirt" data-price="45">
+                     <div class="card-image-container">
+                            <img src="./photoes/skirt1.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="top-05">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Laura Martinez</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                  <img src="./photoes/Aelfric Eden Men's Vintage Oversized Star Graphic Print Hoodie Streetwear Zip-Up Hoodies Sweatshirt Casual Hooded.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Laura Martinez </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
+                 <div class="card" data-category="shoes" data-price="65">
+                     <div class="card-image-container">
+                            <img src="./photoes/Vans.jpg" alt="">
+                            <button class="favorite-heart" data-item-id="shoes-09">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            </button>
+                       </div>
+                  <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px;">Ana Janelidze</p>
+                   <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;">Price:</span> <span style="font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">20$</span></p>
                 </div>
-                <div class="card">
-                  <img src="./photoes/Vans.jpg" alt="">
-                       <p style="color:rgba(114, 18, 78, 1);font-weight:bold; font-size:24px ;">Ana janelidze </p>
-                       <p><span style="color:rgba(141, 21, 98, 1); font-size: 20px;" >Price:</span> <span style=" font-size:20px;color: rgba(114, 18, 78, 1);font-weight:bold;">50$</span> </p>
-            
-                </div>
-            </div>
+                
           </div>
  <footer class="footerlol">
       <div class="footerpink">
