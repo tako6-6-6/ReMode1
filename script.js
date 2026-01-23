@@ -123,40 +123,24 @@ function topFunction() {
 
 // contact page
 // --- CONTACT PAGE LOGIC ---
-const contactForm = document.getElementById('form'); // Make sure ID is 'form' in HTML
+const contactForm = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
-
-// Only run if the form exists on the current page
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // 1. Check if fields are empty
+      
         checkRequired([username, email, password, password2]);
         
-        // 2. Check lengths
         checkLength(username, 3, 15);
         checkLength(password, 6, 25);
-        
-        // 3. Check email format
         checkEmail(email);
-        
-        // 4. Check if passwords match
-        checkPasswordMatch(password, password2);
     });
 }
 
-// Helper: Check if passwords match
-function checkPasswordMatch(input1, input2) {
-    if (input1.value !== input2.value && input2.value !== '') {
-        showError(input2, 'Passwords do not match');
-    }
-}
-
-// Helper: Show error
 function showError(input, message) {
     const formControl = input.parentElement;
     formControl.className = 'form-control error';
@@ -180,23 +164,21 @@ function checkEmail(input) {
     }
 }
 
-// Helper: Required Check
 function checkRequired(inputArr) {
     inputArr.forEach(function(input) {
         if (input && input.value.trim() === '') {
-            showError(input, `${getFieldName(input)} is required`);
+            showError(input, `Question is required`);
         } else if (input) {
             showSucces(input);
         }
     });
 }
 
-// Helper: Length Check
 function checkLength(input, min, max) {
     if (input.value.length < min) {
-        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
+        showError(input, `Phone number is required`);
     } else if (input.value.length > max) {
-        showError(input, `${getFieldName(input)} must be less than ${max} characters`);
+        showError(input, `It must be less than ${max} characters`);
     } else {
         showSucces(input);
     }
