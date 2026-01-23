@@ -39,8 +39,8 @@
   gap: 77px;
   font-size: 24px;
   font-family: "Playfair Display", serif;
-  color: rgba(128, 49, 119, 0.7); /* 70% fill */
-  -webkit-text-stroke: 1px #803177; /* 100% stroke */
+  color: rgba(128, 49, 119, 0.7);
+  -webkit-text-stroke: 1px #803177;
   text-decoration: none;
 }
 
