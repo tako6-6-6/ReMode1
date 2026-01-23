@@ -1055,6 +1055,7 @@ main {
   margin: 0;
   padding: 20px; /* Prevents card from touching screen edges */
   box-sizing: border-box;
+  z-index: -10000000;
 }
 
 /* Default Card Size (Desktop) */
