@@ -1341,6 +1341,7 @@ button:hover {
 /*  -------------------Api-------------------------- */
 #burgerbar {
     display: none !important;
+  z-index: 100000000000;
 }
 
 /* ffffffff */
